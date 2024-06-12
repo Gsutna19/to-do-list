@@ -52,6 +52,8 @@ function activateEditListeners(){
         eb.addEventListener("click", () => {
             updateController[i].style.display = "block"
             inputs[i].disabled = false
+            //trigger change of color for border
+            inputs[i].focus()
         })
     })
 }
@@ -62,6 +64,7 @@ function activateSaveListeners(){
     saveBtn.forEach((sb, i) => {
         sb.addEventListener("click", () => {
             updateItem(inputs[i].value, i)
+            inputs[i].classList.remove("active")
         })
     })
 }
@@ -75,6 +78,7 @@ function activateCancelListeners(){
             updateController[i].style.display = "none"
             inputs[i].value = itemsArray[i]
             inputs[i].disabled = true
+            inputs[i].classList.remove("active")
         }) 
     })
 }

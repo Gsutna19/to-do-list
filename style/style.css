@@ -93,7 +93,7 @@
     display: flex;
     gap: 10px;
   }
-  
+
   .input-controller textarea {
     width: 100%;
     outline: none;
@@ -105,7 +105,7 @@
     background-color: transparent;
     font-size: 1.2rem;
     font-family: inherit;
-    transition: all 0.30s ease-in-out;
+    transition: all 0.10s ease-in-out;
   }
   
   textarea:focus {

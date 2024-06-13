@@ -2,6 +2,8 @@ import _ from 'lodash';
 import './style/style.css';
 import Icon from './images/icon.jpg';
 import printMe from './print';
+// TODO: create modules for each HTML element and implementation.
+// (Maybe don't use HtmlWebpackPlugin?) This way normal Html works.
 
 function component() {
     const element = document.createElement('div');

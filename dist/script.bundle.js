@@ -1,7 +1,9 @@
 /******/ (() => { // webpackBootstrap
 var __webpack_exports__ = {};
 const itemsArray = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : []
+const projectsArray = localStorage.getItem("project") ? JSON.parse(localStorage.getItem("project")) : []
 
+console.log(projectsArray)
 console.log(itemsArray) 
 
 document.querySelector("#enter").addEventListener("click", () => {

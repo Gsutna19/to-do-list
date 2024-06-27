@@ -17,13 +17,13 @@ function component() {
     btn.onclick = printMe;
 
     // Add image to our existing div
-    const myIcon = new Image();
-    myIcon.src = Icon;
+    // const myIcon = new Image();
+    // myIcon.src = Icon;
 
     element.appendChild(btn);
-    element.appendChild(myIcon);
+    // element.appendChild(myIcon);
 
     return element;
 }
 
-document.body.appendChild(component());
+// document.body.appendChild(component());

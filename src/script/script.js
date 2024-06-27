@@ -1,6 +1,10 @@
 const itemsArray = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : []
+const projectsArray = localStorage.getItem("project") ? JSON.parse(localStorage.getItem("project")) : []
 
-console.log(itemsArray) 
+console.log(projectsArray)
+console.log(itemsArray)
+
+// Copy logic for each project. Then add items into their respective projects.
 
 document.querySelector("#enter").addEventListener("click", () => {
     const item = document.querySelector("#item")

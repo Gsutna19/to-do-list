@@ -8,9 +8,12 @@ module.exports = {
         print: './src/print.js',
         script: './src/script/script.js',
     },
+    // devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             title: 'To-do List',
+            template: './src/test.html',
+            // filename: './dist/index.html',
             minify: false,
         }),
     ],

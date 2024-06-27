@@ -17775,19 +17775,6 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ 619:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ printMe)
-/* harmony export */ });
-function printMe() {
-    console.log('I get called from print.js!');
-}
-
-/***/ }),
-
 /***/ 693:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -17910,8 +17897,7 @@ module.exports = __webpack_require__.p + "c452a577c6b4e3a6ff6e.jpg";
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			57: 0,
-/******/ 			568: 0
+/******/ 			57: 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -17942,7 +17928,6 @@ var __webpack_exports__ = {};
 
 // EXTERNAL MODULE: ./node_modules/lodash/lodash.js
 var lodash = __webpack_require__(543);
-var lodash_default = /*#__PURE__*/__webpack_require__.n(lodash);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(72);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
@@ -17992,36 +17977,36 @@ var update = injectStylesIntoStyleTag_default()(style/* default */.A, options);
 
 // EXTERNAL MODULE: ./src/images/icon.jpg
 var icon = __webpack_require__(693);
-// EXTERNAL MODULE: ./src/print.js
-var print = __webpack_require__(619);
 ;// CONCATENATED MODULE: ./src/index.js
 
 
 
 
+// TODO: create modules for each HTML element and implementation.
+// (Maybe don't use HtmlWebpackPlugin?) This way normal Html works.
 
 function component() {
     const element = document.createElement('div');
     const btn = document.createElement('button');
 
     //Lodash, now imported for this script
-    element.innerHTML = lodash_default().join(['Hello', 'webpack'], ' ');
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
     element.classList.add('hello');
 
     btn.innerHTML = 'Click me and check the console.';
-    btn.onclick = print/* default */.A;
+    btn.onclick = printMe;
 
     // Add image to our existing div
-    const myIcon = new Image();
-    myIcon.src = icon;
+    // const myIcon = new Image();
+    // myIcon.src = Icon;
 
     element.appendChild(btn);
-    element.appendChild(myIcon);
+    // element.appendChild(myIcon);
 
     return element;
 }
 
-document.body.appendChild(component());
+// document.body.appendChild(component());
 })();
 
 /******/ })()
